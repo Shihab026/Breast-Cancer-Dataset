@@ -77,3 +77,15 @@ To run this project, you will need a Google Colab environment or a local Python 
     jupyter notebook
     ```
 5.  **Run Cells:** Open the `.ipynb` notebook file in Jupyter and execute all cells sequentially.
+6.  Deploying the Model with Streamlit
+To deploy the selected XGBoost model, we can create a simple web application using Streamlit. This app will allow users to input the 30 features and get a real-time prediction (Benign or Malignant).
+
+Instructions to run the Streamlit app:
+Save the Code: Copy the Python code from the next cell and save it as a Python file (e.g., app.py) in your local machine.
+Install Streamlit: If you haven't already, install Streamlit:
+pip install streamlit joblib scikit-learn xgboost pandas
+Save the Model: The Streamlit app will need the trained XGBoost model (xgboost_breast_cancer_model.pkl). Run the model serialization code in the 'Deployment Considerations' section if you haven't already, and ensure xgboost_breast_cancer_model.pkl is saved in the same directory as app.py.
+Run the App: Open your terminal, navigate to the directory where you saved app.py and xgboost_breast_cancer_model.pkl, and run the following command:
+streamlit run app.py
+This will open the Streamlit app in your web browser.
+
